@@ -3,7 +3,7 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## Version [v1.5.0] - 2024-06-26
 
 ### Added
 
@@ -20,6 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   eye-catching. ([#2499])
 * Thickness and rounding of docstrings and code blocks have been adjusted to match
   admonitions. ([#2499])
+* _All_ search terms in the HTML search must now match the result, as opposed to _any_. In other words, they are now `AND`-ed together, and not `OR`-ed. ([#2514])
+
+### Fixed
+
+* The search prompt in the HTML output again correctly handles parenthesis and other special character that would previously cause the search to crash. ([#2513])
 
 ## Version [v1.4.1] - 2024-05-02
 
@@ -1356,6 +1361,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.3.0]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.3.0
 [v1.4.0]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.4.0
 [v1.4.1]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.4.1
+[v1.5.0]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.5.0
 [#198]: https://github.com/JuliaDocs/Documenter.jl/issues/198
 [#245]: https://github.com/JuliaDocs/Documenter.jl/issues/245
 [#487]: https://github.com/JuliaDocs/Documenter.jl/issues/487
@@ -1854,6 +1860,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#2496]: https://github.com/JuliaDocs/Documenter.jl/issues/2496
 [#2497]: https://github.com/JuliaDocs/Documenter.jl/issues/2497
 [#2499]: https://github.com/JuliaDocs/Documenter.jl/issues/2499
+[#2513]: https://github.com/JuliaDocs/Documenter.jl/issues/2513
+[#2514]: https://github.com/JuliaDocs/Documenter.jl/issues/2514
 [JuliaLang/julia#36953]: https://github.com/JuliaLang/julia/issues/36953
 [JuliaLang/julia#38054]: https://github.com/JuliaLang/julia/issues/38054
 [JuliaLang/julia#39841]: https://github.com/JuliaLang/julia/issues/39841
